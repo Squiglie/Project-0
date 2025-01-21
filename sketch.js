@@ -1,27 +1,24 @@
-function setup() {
-  createCanvas(600, 600);
-
- 
+function setup(){
+  createCanvas(600, 600); 
 }
 
-function draw() {
+function draw(){
   background(200,0,155);
   
-  noStroke();
-  rotate(QUARTER_PI);
-  fill(255, 100, 10);
-  //rectMode(CENTER);
-  rect(0, 0, 1000, 1000);
+  fill(255, 100, 0);
+  // noStroke();
 
+  for (let i = 0; i < 30; i++) {
+    beginShape();
+    triangle(0, 0, i*10, 600, 600, 600);
+      beginContour();
+        triangle(i*10, 580, 20, 40, 560, 580);
+      endContour();
+  endShape(CLOSE);;
+    
+  }
+  
 
-  // rect(600, 200, 20, 20);
-
-  
- 
-
-  
-  
-
-  
-  
+  print("mouseX:" +mouseX);
+  print("mouseY:" +mouseY); 
 }
