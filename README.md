@@ -6,4 +6,3 @@ git add .
 git pull
 
 git commit -am'comment of changes'
-git push
